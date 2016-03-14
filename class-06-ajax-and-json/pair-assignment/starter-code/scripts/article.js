@@ -50,9 +50,8 @@ Article.fetchAll = function() {
     // we can load it by calling the .loadAll function,
     // and then render the index page (using the proper method on the articleView object).
     Article.loadAll(localStorage.rawData);
-    articleView.initIndexPage();//(); //TODO: Change this fake method call to the correct one that will render the index page.
+    articleView.initIndexPage();
   } else {
-    // TODO: When we don't already have the rawData, we need to:
     // 1. Retrieve the JSON file from the server with AJAX (which jQuery method is best for this?),
     $.getJSON('data/hackerIpsum.json', function(rawData) {
       localStorage.rawData = rawData;
