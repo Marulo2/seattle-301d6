@@ -9,9 +9,10 @@ Article.createTable();
   // code that used to be in index.html.
   // Also be sure to hide all the main section elements, and reveal the #articles section:
   articlesController.index = function() {
+    $('.tab-content').hide();
+    $('#articles').fadeIn();
 
-    // hide main section, show all articles
-
+    console.log('it works')
   };
 
   module.articlesController = articlesController;
